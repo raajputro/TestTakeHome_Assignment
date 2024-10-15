@@ -13,3 +13,5 @@
 
 
 You can always configure your repository in "playwrigt.config.js" file, if needed.
+
+For playwright documentations, please check https://playwright.dev/docs/intro
