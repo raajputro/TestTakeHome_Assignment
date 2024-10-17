@@ -1,9 +1,9 @@
-name: GitHub Actions Demo
+name: Execute All Test on Push
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   - push
 jobs:
-  Explore-GitHub-Actions:
+  Execute-All-Test:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }}
