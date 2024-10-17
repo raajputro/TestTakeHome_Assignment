@@ -20,7 +20,10 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
+      - name: Setup playwright
+        run: npx playwright install-deps    
+      - name: Install dependencies and run tests
+        uses: bahmutov/npm-install@v1   
       - name: Execute tests in Test folder
-        run: |
-          npx playwright test tests/testSaurcedemo.spec.js
+        run: npx playwright test tests/testSaurcedemo.spec.js
       - run: echo "🍏 This job's status is ${{ job.status }}."
