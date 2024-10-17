@@ -1,7 +1,8 @@
 name: Execute All Test on Push
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-  - push
+  push:
+    branches: ['main']
 jobs:
   Execute-All-Test:
     runs-on: ubuntu-latest
