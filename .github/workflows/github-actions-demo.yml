@@ -21,7 +21,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: Setup playwright
-        run: npx playwright install-deps    
+        run: npx playwright install
       - name: Install dependencies and run tests
         uses: bahmutov/npm-install@v1   
       - name: Execute tests in Test folder
