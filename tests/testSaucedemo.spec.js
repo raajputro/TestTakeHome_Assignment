@@ -39,6 +39,7 @@ test('Add item 1 to Cart', async () => {
   const saucedemoInventoryPg = new saucedemoInventoryPage(page);
 
   await saucedemoInventoryPg.itemVisible(itemName1);
+  await saucedemoInventoryPg.sortProducts();
   await saucedemoInventoryPg.addItem(itemName1);    
 });
 

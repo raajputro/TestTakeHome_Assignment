@@ -50,6 +50,25 @@ exports.saucedemoInventoryPage = class saucedemoInventoryPage {
         await expect(cartCountElem).toHaveText(cartCount.toString());        
     }
 
+    async sortProducts(){
+        var itemElemXpath = '//*[@class="product_sort_container"]';
+
+        var elem = this.page.locator(itemElemXpath);
+
+        try {
+            await expect(elem).toBeVisible();
+            // await elem.click();
+            await this.page.selectOption(itemElemXpath, {index:2});
+            await this.page.screenshot({path:'screenshot0.png'});
+            await this.page.selectOption(itemElemXpath, {index:1});
+            await this.page.screenshot({path:'screenshot1.png'});
+            await this.page.selectOption(itemElemXpath, {index:3});
+        } catch (error) {
+            console.log("Element not found to click!");
+        }
+        await this.page.screenshot({path:'screenshot2.png'});
+    }
+
     async goToCart(){
         var inputElement = this.goToCartLink;
         await expect(inputElement).toBeVisible();

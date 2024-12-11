@@ -15,3 +15,7 @@
 You can always configure your repository in "playwrigt.config.js" file, if needed.
 
 For playwright documentations, please check https://playwright.dev/docs/intro
+
+
+10. Run npm i @cucumber/cucumber in the terminal to install cucumber in the project for writing test cases in Gherkin
+11. Also install "Cucumber (Gherkin) Full Support" [VS Marketplace Link: https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete] extension for gherkin beautification
