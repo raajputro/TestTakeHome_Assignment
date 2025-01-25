@@ -58,11 +58,15 @@ exports.saucedemoInventoryPage = class saucedemoInventoryPage {
         try {
             await expect(elem).toBeVisible();
             // await elem.click();
-            await this.page.selectOption(itemElemXpath, {index:2});
-            await this.page.screenshot({path:'screenshot0.png'});
-            await this.page.selectOption(itemElemXpath, {index:1});
-            await this.page.screenshot({path:'screenshot1.png'});
-            await this.page.selectOption(itemElemXpath, {index:3});
+            await this.page.selectOption(itemElemXpath, 'Name (Z to A)')
+            await this.page.screenshot({path:'screenshot000.png'});
+            await this.page.selectOption(itemElemXpath, 'Price (low to high)')
+            await this.page.screenshot({path:'screenshot001.png'});
+            // await this.page.selectOption(itemElemXpath, {index:2});
+            // await this.page.screenshot({path:'screenshot0.png'});
+            // await this.page.selectOption(itemElemXpath, {index:1});
+            // await this.page.screenshot({path:'screenshot1.png'});
+            // await this.page.selectOption(itemElemXpath, {index:3});
         } catch (error) {
             console.log("Element not found to click!");
         }
